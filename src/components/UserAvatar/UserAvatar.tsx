@@ -15,7 +15,6 @@ const UserAvatar: React.FC<Props> = ({
 
   const deleteProfilePicClick = () => {
     dispatch(removeUserProfilePicture(id));
-    console.log("clocked");
   };
   return (
     <S.ProfilePicContainer>

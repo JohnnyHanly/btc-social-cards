@@ -2,7 +2,6 @@ import faker from "faker";
 import IUserProfile from "types/UserProfile";
 
 const fetchUserProfiles = (count: number): IUserProfile[] => {
-  console.log("fetching user profiles");
   const userProfiles: IUserProfile[] = [];
   for (let i = 0; i < count; i++) {
     userProfiles.push(createUserProfile());

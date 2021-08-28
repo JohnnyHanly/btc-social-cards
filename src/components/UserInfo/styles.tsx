@@ -168,5 +168,5 @@ export const AddressInputRow = styled(ProfilePropertyRow)`
 export const AddressInputContainer = styled.div`
   display: grid;
   gap: 1.5em;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
 `;

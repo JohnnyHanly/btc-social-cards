@@ -1,5 +1,5 @@
 import IUserProfile, { IUserInfoEditState } from "types/UserProfile";
-
+import faker from "faker";
 export const mapUserStateToProfile = (updatedUser: IUserInfoEditState) => {
   return {
     info: {
@@ -45,3 +45,20 @@ export const mapUserProfileToState = (userState: IUserProfile) => {
     id: userState.id,
   } as IUserInfoEditState;
 };
+
+export const initalUserInfoState = {
+  firstname: "",
+  lastname: "",
+  city: "",
+  street: "",
+  state: "",
+  zipcode: "",
+  profilePicUrl: "",
+  email: "",
+  phone: "",
+  websiteurl: "",
+  companyname: "",
+  companymotto: "",
+  companylogo: "",
+  id: faker.datatype.uuid(),
+} as IUserInfoEditState;

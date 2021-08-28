@@ -17,7 +17,6 @@ export const userProfileSlice = createSlice({
   initialState,
   reducers: {
     selectUserProfile(state, action) {
-      console.log("selecting user profile");
       const userProfile = state.userProfiles.find(
         (up) => up.id === action.payload
       ) as IUserProfile;
@@ -41,12 +40,16 @@ export const userProfileSlice = createSlice({
       const index = state.userProfiles.indexOf(userToUpdate);
       userToUpdate.info.profilePicUrl = "";
       userListToUpdate[index] = userToUpdate;
-      console.log("fdfdf", userListToUpdate);
       state.userProfiles = [...userListToUpdate];
     },
     loadMoreUserProfiles(state) {
       const newUserProfiles = fetchUserProfiles(16);
       state.userProfiles = [...state.userProfiles, ...newUserProfiles];
+    },
+    addNewUserProfile(state, action) {
+      const newUserProfiles = [...state.userProfiles];
+      newUserProfiles.unshift(action.payload);
+      state.userProfiles = [...newUserProfiles];
     },
   },
 });
@@ -56,6 +59,7 @@ export const {
   updateUserProfile,
   removeUserProfilePicture,
   loadMoreUserProfiles,
+  addNewUserProfile,
 } = userProfileSlice.actions;
 
 export default userProfileSlice.reducer;

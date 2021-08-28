@@ -18,6 +18,9 @@ export const UserPropertyInput = styled.input<ITextInputProps>`
   width: 100%;
   overflow: auto;
   word-wrap: normal;
+  :focus-visible {
+    outline-color: #e7e7e7;
+  }
   @media only screen and (min-width: 960px) {
     font-size: 1.5em;
   }
@@ -36,7 +39,6 @@ export const NameInput = styled(UserPropertyInput)`
 export const AddressInput = styled(UserPropertyInput)`
   width: 100%;
   color: #374a59;
-
 `;
 
 export const Label = styled.label``;

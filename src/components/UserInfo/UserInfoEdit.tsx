@@ -43,6 +43,11 @@ export const UserProfileEdit: React.FC<Props> = ({
             />
             <DynamicTextInput
               updateField={updateUserDetails}
+              field={"Zip Code"}
+              value={userInfoState.zipcode}
+            />
+            <DynamicTextInput
+              updateField={updateUserDetails}
               field={"City"}
               value={userInfoState.city}
             />
@@ -50,11 +55,6 @@ export const UserProfileEdit: React.FC<Props> = ({
               updateField={updateUserDetails}
               field={"State"}
               value={userInfoState.state}
-            />
-            <DynamicTextInput
-              updateField={updateUserDetails}
-              field={"Zip Code"}
-              value={userInfoState.zipcode}
             />
           </S.AddressInputContainer>
         </S.AddressInputRow>

@@ -1,22 +1,21 @@
 import React, { ChangeEvent, useState } from "react";
-import IUserProfile from "types/UserProfile";
 import { useDispatch, useSelector } from "react-redux";
-import { selectUserProfile } from "redux/userProfileSlice";
 import UserInfo from "components/UserInfo/UserInfo";
 import UserInfoEdit from "components/UserInfo/UserInfoEdit";
-import { updateUserProfile } from "redux/userProfileSlice";
+import { updateUserProfile, selectUserProfile } from "redux/userProfileSlice";
 import { mapUserStateToProfile, mapUserProfileToState } from "utils/global";
-import { IUserInfoEditState } from "types/UserProfile";
-import * as S from "./styles";
+import IUserProfile, { IUserInfoEditState } from "types/UserProfile";
+import renderToast from "utils/renderToast";
 import UserAvatar from "components/UserAvatar/UserAvatar";
 import { RootState } from "redux/store";
+import * as S from "./styles";
 
 const SocialCard: React.FC<Props> = ({ userProfile }) => {
   const [isUserUnchanged, setUserUpdated] = useState(true);
-
   const selectedProfile = useSelector<RootState>(
     (state) => state.userProfiles.selectedUserProfile
   ) as IUserProfile;
+
   const dispatch = useDispatch();
   const [userInfoState, setUserInfoState] = useState<IUserInfoEditState>(
     mapUserProfileToState(userProfile)
@@ -34,6 +33,7 @@ const SocialCard: React.FC<Props> = ({ userProfile }) => {
     ) as IUserProfile;
     dispatch(updateUserProfile(mappedUserDetails));
     setUserUpdated(true);
+    renderToast({ type: "success", message: "User updated" });
   };
   const handleSocialCardClick = () => {
     dispatch(selectUserProfile(userProfile.id));
