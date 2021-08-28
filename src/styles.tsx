@@ -1,6 +1,4 @@
-import styled from "styled-components";
-export const AppContainer = styled.div`
-  background-color: #282c34;
+import styled from "styled-components/macro";export const AppContainer = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -8,4 +6,5 @@ export const AppContainer = styled.div`
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  width: 100%;
 `;

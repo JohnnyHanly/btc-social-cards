@@ -1,25 +1,24 @@
-import React, { useEffect, useState } from "react";
-import { AppContainer } from "./styles";
-import faker, { company } from "faker";
-import { SocialCards } from "domains/SocialCards/SocialCards";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+import SocialCards from "pages/SocialCards/SocialCards";
+import { store } from "redux/store";
+import * as S from "./styles";
 
 function App() {
-  useEffect(() => {
-    var test = {
-      name: faker.name.firstName() + faker.name.lastName(),
-      address: faker.address.streetAddress(),
-      phone: faker.phone.phoneNumber(),
-      website: faker.internet.domainName(),
-      company: faker.company.companyName(),
-      companyDesc: faker.company.catchPhrase(),
-      city: faker.address.citySuffix(),
-    };
-    console.log(test);
-  });
+  useEffect(() => {});
   return (
-    <AppContainer>
-      <SocialCards />
-    </AppContainer>
+    <Router>
+      <Provider store={store}>
+        <S.AppContainer>
+          <Switch>
+            <Route path="/">
+              <SocialCards />
+            </Route>
+          </Switch>
+        </S.AppContainer>
+      </Provider>
+    </Router>
   );
 }
 
