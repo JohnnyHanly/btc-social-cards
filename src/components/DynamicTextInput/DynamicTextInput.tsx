@@ -25,7 +25,6 @@ export const DynamicTextInput: React.FC<Props> = ({
       case "Last Name":
         return (
           <>
-            <S.Label>{field}</S.Label>
             <S.NameInput
               field={field}
               value={value}
@@ -37,7 +36,6 @@ export const DynamicTextInput: React.FC<Props> = ({
       default:
         return (
           <>
-            <S.Label>{field}</S.Label>
             <S.AddressInput
               field={field}
               name={key}

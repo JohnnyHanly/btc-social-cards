@@ -1,5 +1,6 @@
 import React from "react";
 import SocialCard from "components/SocialCard/SocialCard";
+import { AddSocialCard } from "components/SocialCard/AddSocialCard";
 import IUserProfile from "types/UserProfile";
 import { useSelector } from "react-redux";
 import { LoadMore } from "components/LoadMore/LoadMore";
@@ -14,6 +15,9 @@ const SocialCards: React.FC = () => {
   return (
     <>
       <S.SocialCardsContainer>
+        <S.SocialCardListItem>
+          <AddSocialCard />
+        </S.SocialCardListItem>
         {userProfiles.map((userProfile) => (
           <S.SocialCardListItem key={userProfile.id}>
             <SocialCard userProfile={userProfile} />

@@ -13,7 +13,6 @@ export const SocialCardContainer = styled.div<ISocialCardContainerProps>`
   flex-direction: column;
   justify-content: center;
   box-shadow: 0px 10px 64px 0px rgba(0, 0, 0, 0.1);
-
   align-items: center;
   width: 100%;
   filter: ${(props) => (props.selected ? activeShadow : "none")};
@@ -24,4 +23,17 @@ export const SocialCardContainer = styled.div<ISocialCardContainerProps>`
   @media only screen and (min-width: 960px) {
     flex-direction: row;
   }
+`;
+
+export const AddSocialCardContainer = styled(SocialCardContainer)`
+  color: #e7e7e7;
+  background-color: white;
+  :hover {
+    filter: ${activeShadow};
+    cursor: pointer;
+  }
+`;
+
+export const PlusSign = styled.div`
+  font-size: 7em;
 `;

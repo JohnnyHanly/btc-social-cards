@@ -83,7 +83,7 @@ export const CompanyInfoContainer = styled(ProfilePropertyRow)`
 export const CompanyInfoContainerWithButton = styled(CompanyInfoContainer)`
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   @media only screen and (min-width: 960px) {
     justify-content: space-between;
     flex-direction: row;

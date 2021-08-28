@@ -8,7 +8,7 @@ interface IUserProfilesState {
 }
 
 const initialState = {
-  userProfiles: fetchUserProfiles(16).sort(),
+  userProfiles: fetchUserProfiles(17).sort(),
   selectedUserProfile: {},
 } as IUserProfilesState;
 
