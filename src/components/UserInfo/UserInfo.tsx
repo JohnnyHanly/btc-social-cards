@@ -6,25 +6,25 @@ import * as S from "./styles";
 
 export const UserInfo: React.FC<Props> = ({ userProfile }) => {
   return (
-    <S.ProfileDetailsContainer>
-      <S.ProfileDetailsContent>
-        <S.ProfileName>{displayName(userProfile.info.name)}</S.ProfileName>
-        <S.ProfilePropertyRow>
-          <S.PropertyRowIcon src={Icons.mailIcon} alt="mail icon" />
-          <S.Property>{userProfile.info.email}</S.Property>
-        </S.ProfilePropertyRow>
-        <S.ProfilePropertyRow>
-          <S.PropertyRowIcon src={Icons.contactIcon} alt="contact icon" />
-          <S.Property>{displayAddress(userProfile.info.address)}</S.Property>
-        </S.ProfilePropertyRow>
-        <S.ProfilePropertyRow>
-          <S.PropertyRowIcon src={Icons.phoneIcon} alt="phone icon" />
-          <S.Property> {userProfile.info.phone}</S.Property>
-        </S.ProfilePropertyRow>
-        <S.ProfilePropertyRow>
-          <S.PropertyRowIcon src={Icons.webIcon} alt="phone icon" />
+    <S.UserInfoContainer>
+      <S.UserInfoContent>
+        <S.UserName>{displayName(userProfile.info.name)}</S.UserName>
+        <S.UserPropertyRow>
+          <S.UserPropertyRowIcon src={Icons.mailIcon} alt="mail icon" />
+          <S.UserProperty>{userProfile.info.email}</S.UserProperty>
+        </S.UserPropertyRow>
+        <S.UserPropertyRow>
+          <S.UserPropertyRowIcon src={Icons.contactIcon} alt="contact icon" />
+          <S.UserProperty>{displayAddress(userProfile.info.address)}</S.UserProperty>
+        </S.UserPropertyRow>
+        <S.UserPropertyRow>
+          <S.UserPropertyRowIcon src={Icons.phoneIcon} alt="phone icon" />
+          <S.UserProperty> {userProfile.info.phone}</S.UserProperty>
+        </S.UserPropertyRow>
+        <S.UserPropertyRow>
+          <S.UserPropertyRowIcon src={Icons.webIcon} alt="phone icon" />
           <S.ProfileUrlRow> {userProfile.info.websiteUrl}</S.ProfileUrlRow>
-        </S.ProfilePropertyRow>
+        </S.UserPropertyRow>
         <S.CompanyInfoContainer>
           <S.CompanyIcon src={Icons.companyIcon} alt="phone icon" />
           <S.CompanyRow>
@@ -32,8 +32,8 @@ export const UserInfo: React.FC<Props> = ({ userProfile }) => {
             <S.CompanyDesc>{userProfile.company.motto}</S.CompanyDesc>
           </S.CompanyRow>
         </S.CompanyInfoContainer>
-      </S.ProfileDetailsContent>
-    </S.ProfileDetailsContainer>
+      </S.UserInfoContent>
+    </S.UserInfoContainer>
   );
 };
 

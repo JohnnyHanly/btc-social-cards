@@ -31,7 +31,7 @@ export type IUserInfoEditState = {
   street: string;
   state: string;
   zipcode: string;
-  profilePicUrl: string;
+  profilepicurl: string;
   email: string;
   phone: string;
   websiteurl: string;

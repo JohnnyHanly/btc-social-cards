@@ -5,29 +5,22 @@ interface ISocialCardContainerProps {
   selected: boolean;
 }
 export const SocialCardContainer = styled.div<ISocialCardContainerProps>`
-  border: 1px solid transparent;
-  border-radius: 0.75rem;
-  display: flex;
   height: 100%;
-  overflow: hidden;
-  flex-direction: column;
-  justify-content: center;
-  box-shadow: 0px 10px 64px 0px rgba(0, 0, 0, 0.1);
-  align-items: center;
-  width: 100%;
   filter: ${(props) => (props.selected ? activeShadow : "none")};
+  border-radius: 0.75em;
+  box-shadow: 0px 10px 64px 0px rgba(0, 0, 0, 0.1);
   :hover {
     filter: ${(props) => (props.selected ? activeShadow : normalShadow)};
     cursor: pointer;
-  }
-  @media only screen and (min-width: 960px) {
-    flex-direction: row;
   }
 `;
 
 export const AddSocialCardContainer = styled(SocialCardContainer)`
   color: #e7e7e7;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   :hover {
     filter: ${activeShadow};
     cursor: pointer;
@@ -35,5 +28,5 @@ export const AddSocialCardContainer = styled(SocialCardContainer)`
 `;
 
 export const PlusSign = styled.div`
-  font-size: 7em;
+  font-size: 7em;SS
 `;

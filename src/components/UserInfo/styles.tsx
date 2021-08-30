@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-export const ProfileDetailsContainer = styled.div`
+export const UserInfoContainer = styled.div`
   background-color: white;
   color: black;
   width: 100%;
@@ -10,7 +10,7 @@ export const ProfileDetailsContainer = styled.div`
   }
 `;
 
-export const ProfileDetailsContent = styled.div`
+export const UserInfoContent = styled.div`
   gap: 1.75em;
   display: flex;
   height: 100%;
@@ -23,7 +23,7 @@ export const ProfileDetailsContent = styled.div`
   }
 `;
 
-export const ProfileName = styled.h3`
+export const UserName = styled.h3`
   margin: 1.5em 0 0 0;
   font-family: "DM Serif Display", serif;
   font-size: 1.75em;
@@ -32,7 +32,7 @@ export const ProfileName = styled.h3`
   }
 `;
 
-export const Property = styled.h5`
+export const UserProperty = styled.h5`
   margin: 0;
   padding: 0;
   color: #374a59;
@@ -44,7 +44,7 @@ export const Property = styled.h5`
     font-size: 1.5em;
   }
 `;
-export const ProfilePropertyRow = styled.div`
+export const UserPropertyRow = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -55,11 +55,11 @@ export const ProfilePropertyRow = styled.div`
   }
 `;
 
-export const ProfileUrlRow = styled(Property)`
+export const ProfileUrlRow = styled(UserProperty)`
   color: #007ae9;
   cursor: pointer;
 `;
-export const PropertyRowIcon = styled.img`
+export const UserPropertyRowIcon = styled.img`
   margin-right: 1.2em;
   transform: scale(0.9);
   @media only screen and (min-width: 960px) {
@@ -67,7 +67,7 @@ export const PropertyRowIcon = styled.img`
   }
 `;
 
-export const CompanyInfoContainer = styled(ProfilePropertyRow)`
+export const CompanyInfoContainer = styled(UserPropertyRow)`
   gap: 1rem;
   width: 100%;
   margin-top: 0.25rem;
@@ -89,7 +89,7 @@ export const CompanyInfoContainerWithButton = styled(CompanyInfoContainer)`
     flex-direction: row;
   }
 `;
-export const CompanyIcon = styled(PropertyRowIcon)`
+export const CompanyIcon = styled(UserPropertyRowIcon)`
   margin-right: 0;
   @media only screen and (min-width: 960px) {
     transform: scale(1.3);
@@ -160,7 +160,7 @@ export const EditNameContainer = styled.div`
   margin-top: 2em;
 `;
 
-export const AddressInputRow = styled(ProfilePropertyRow)`
+export const AddressInputRow = styled(UserPropertyRow)`
   justify-content: flex-start;
   align-items: center;
 `;

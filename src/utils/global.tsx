@@ -13,7 +13,7 @@ export const mapUserStateToProfile = (updatedUser: IUserInfoEditState) => {
         state: updatedUser.state,
         zipCode: updatedUser.zipcode,
       },
-      profilePicUrl: updatedUser.profilePicUrl,
+      profilePicUrl: updatedUser.profilepicurl,
       email: updatedUser.email,
       phone: updatedUser.phone,
       websiteUrl: updatedUser.websiteurl,
@@ -35,7 +35,7 @@ export const mapUserProfileToState = (userState: IUserProfile) => {
     street: userState.info.address.street,
     state: userState.info.address.state,
     zipcode: userState.info.address.zipCode,
-    profilePicUrl: userState.info.profilePicUrl,
+    profilepicurl: userState.info.profilePicUrl,
     email: userState.info.email,
     phone: userState.info.phone,
     websiteurl: userState.info.websiteUrl,
@@ -46,19 +46,27 @@ export const mapUserProfileToState = (userState: IUserProfile) => {
   } as IUserInfoEditState;
 };
 
-export const initalUserInfoState = {
-  firstname: "",
-  lastname: "",
-  city: "",
-  street: "",
-  state: "",
-  zipcode: "",
-  profilePicUrl: "",
-  email: "",
-  phone: "",
-  websiteurl: "",
-  companyname: "",
-  companymotto: "",
-  companylogo: "",
+export const initalUserProfile = {
+  info: {
+    name: {
+      first: "",
+      last: "",
+    },
+    address: {
+      city: "",
+      street: "",
+      state: "",
+      zipCode: "",
+    },
+    profilePicUrl: "",
+    email: "",
+    phone: "",
+    websiteUrl: "",
+  },
+  company: {
+    name: "",
+    motto: "",
+    logo: "",
+  },
   id: faker.datatype.uuid(),
-} as IUserInfoEditState;
+} as IUserProfile;

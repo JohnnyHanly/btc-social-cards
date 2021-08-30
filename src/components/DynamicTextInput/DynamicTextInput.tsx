@@ -36,6 +36,17 @@ export const DynamicTextInput: React.FC<Props> = ({
             />
           </>
         );
+      case "Profile Pic Url":
+        return (
+          <S.ProfilePicInput
+            field={field}
+            name={key}
+            onChange={updateField}
+            value={value}
+            placeholder={field}
+          />
+        );
+
       default:
         return (
           <>

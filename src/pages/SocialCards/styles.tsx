@@ -15,6 +15,7 @@ export const SocialCardsContainer = styled.div`
 
 export const SocialCardListItem = styled.div`
   flex: 1 0 50%;
+
   @media only screen and (min-width: 960px) {
     flex: 1 0 33%;
   }

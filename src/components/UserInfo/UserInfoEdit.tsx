@@ -4,106 +4,113 @@ import { IUserInfoEditState } from "types/UserProfile";
 import Icons from "assets/icons";
 import * as S from "./styles";
 
-export const UserProfileEdit: React.FC<Props> = ({
+export const UserInfoEdit: React.FC<Props> = ({
   userInfoState,
   isUserUnchanged,
-  updateUserDetails,
+  updateUserInfo,
   handleSaveClick,
 }) => {
   return (
-    <S.ProfileDetailsContainer onClick={(event) => event.stopPropagation()}>
-      <S.ProfileDetailsContent>
+    <S.UserInfoContainer onClick={(event) => event.stopPropagation()}>
+      <S.UserInfoContent>
         <S.EditNameContainer>
           <DynamicTextInput
-            updateField={updateUserDetails}
+            updateField={updateUserInfo}
             field={"First Name"}
             value={userInfoState.firstname}
           />
           <DynamicTextInput
-            updateField={updateUserDetails}
+            updateField={updateUserInfo}
             field={"Last Name"}
             value={userInfoState.lastname}
           />
         </S.EditNameContainer>
-        <S.ProfilePropertyRow>
-          <S.PropertyRowIcon src={Icons.mailIcon} alt="mail icon" />
+        <S.UserPropertyRow>
+          <S.UserPropertyRowIcon src={Icons.mailIcon} alt="mail icon" />
           <DynamicTextInput
-            updateField={updateUserDetails}
+            updateField={updateUserInfo}
             field={"Email"}
             value={userInfoState.email}
           />
-        </S.ProfilePropertyRow>
+        </S.UserPropertyRow>
         <S.AddressInputRow>
-          <S.PropertyRowIcon src={Icons.contactIcon} alt="contact icon" />
+          <S.UserPropertyRowIcon src={Icons.contactIcon} alt="contact icon" />
           <S.AddressInputContainer>
             <DynamicTextInput
-              updateField={updateUserDetails}
+              updateField={updateUserInfo}
               field={"Street"}
               value={userInfoState.street}
             />
             <DynamicTextInput
-              updateField={updateUserDetails}
+              updateField={updateUserInfo}
               field={"Zip Code"}
               value={userInfoState.zipcode}
             />
             <DynamicTextInput
-              updateField={updateUserDetails}
+              updateField={updateUserInfo}
               field={"City"}
               value={userInfoState.city}
             />
             <DynamicTextInput
-              updateField={updateUserDetails}
+              updateField={updateUserInfo}
               field={"State"}
               value={userInfoState.state}
             />
           </S.AddressInputContainer>
         </S.AddressInputRow>
-        <S.ProfilePropertyRow>
-          <S.PropertyRowIcon src={Icons.phoneIcon} alt="phone icon" />
+        <S.UserPropertyRow>
+          <S.UserPropertyRowIcon src={Icons.phoneIcon} alt="phone icon" />
           <DynamicTextInput
-            updateField={updateUserDetails}
+            updateField={updateUserInfo}
             field={"Phone"}
             value={userInfoState.phone}
           />
-        </S.ProfilePropertyRow>
-        <S.ProfilePropertyRow>
-          <S.PropertyRowIcon src={Icons.webIcon} alt="phone icon" />
+        </S.UserPropertyRow>
+        <S.UserPropertyRow>
+          <S.UserPropertyRowIcon src={Icons.webIcon} alt="phone icon" />
           <DynamicTextInput
-            updateField={updateUserDetails}
+            updateField={updateUserInfo}
             field={"Web Site Url"}
             value={userInfoState.websiteurl}
           />
-        </S.ProfilePropertyRow>
+        </S.UserPropertyRow>
         <S.CompanyInfoContainerWithButton>
           <S.CompanyDetails>
             <S.CompanyIcon src={Icons.companyIcon} alt="phone icon" />
             <S.CompanyRow>
               <DynamicTextInput
-                updateField={updateUserDetails}
+                updateField={updateUserInfo}
                 field={"Company Name"}
                 value={userInfoState.companyname}
               />
               <DynamicTextInput
-                updateField={updateUserDetails}
+                updateField={updateUserInfo}
                 field={"Company Motto"}
                 value={userInfoState.companymotto}
               />
             </S.CompanyRow>
           </S.CompanyDetails>
-          <S.SaveButton disabled={isUserUnchanged} onClick={handleSaveClick}>
+          <S.SaveButton
+            disabled={isUserUnchanged}
+            onClick={() => handleSaveClick(userInfoState)}
+          >
             Save
           </S.SaveButton>
         </S.CompanyInfoContainerWithButton>
-      </S.ProfileDetailsContent>
-    </S.ProfileDetailsContainer>
+      </S.UserInfoContent>
+    </S.UserInfoContainer>
   );
 };
 
 type Props = {
   userInfoState: IUserInfoEditState;
   isUserUnchanged: boolean;
-  updateUserDetails: (event: ChangeEvent<HTMLInputElement>) => void;
-  handleSaveClick: () => void;
+  updateUserInfo: (
+    event: ChangeEvent<HTMLInputElement>,
+    key?: string,
+    val?: string
+  ) => void;
+  handleSaveClick: (userInfoState: IUserInfoEditState) => void;
 };
 
-export default UserProfileEdit;
+export default UserInfoEdit;

@@ -11,5 +11,6 @@ export default interface IInputTypes {
     | "Zip Code"
     | "State"
     | "Company Name"
-    | "Company Motto";
+    | "Company Motto"
+    | "Profile Pic Url";
 }

@@ -5,11 +5,10 @@ export const ProfilePicContainer = styled.div`
   flex-direction: column;
   background: linear-gradient(#f395ba 0%, #fed182 100%);
   align-items: center;
-  width: 1000%;
+  width: 100%;
+  height: 100%;
   @media only screen and (min-width: 960px) {
     width: 40%;
-    background: linear-gradient(135deg, #f395ba 0%, #fed182 100%);
-    height: 100%;
   }
 `;
 
@@ -26,7 +25,6 @@ export const ProfilePic = styled.img`
 `;
 
 export const ProfileInitials = styled.div`
-  border: 1px solid transparent;
   font-size: 3rem;
   display: flex;
   flex-direction: row;

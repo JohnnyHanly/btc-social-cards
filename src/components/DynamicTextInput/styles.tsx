@@ -40,5 +40,13 @@ export const AddressInput = styled(UserPropertyInput)`
   width: 100%;
   color: #374a59;
 `;
+export const ProfilePicInput = styled(UserPropertyInput)`
+  color: black;
+  font-size: 0.65em;
+  margin-bottom: 2em;
+  @media only screen and (min-width: 960px) {
+    margin-bottom: 0.25em;
+  }
+`;
 
 export const Label = styled.label``;

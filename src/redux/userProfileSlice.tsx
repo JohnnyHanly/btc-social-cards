@@ -32,16 +32,6 @@ export const userProfileSlice = createSlice({
 
       state.userProfiles = [...userListToUpdate];
     },
-    removeUserProfilePicture(state, action) {
-      const userListToUpdate = [...state.userProfiles];
-      const userToUpdate = state.userProfiles.find(
-        (user) => user.id === action.payload
-      ) as IUserProfile;
-      const index = state.userProfiles.indexOf(userToUpdate);
-      userToUpdate.info.profilePicUrl = "";
-      userListToUpdate[index] = userToUpdate;
-      state.userProfiles = [...userListToUpdate];
-    },
     loadMoreUserProfiles(state) {
       const newUserProfiles = fetchUserProfiles(16);
       state.userProfiles = [...state.userProfiles, ...newUserProfiles];
@@ -57,7 +47,6 @@ export const userProfileSlice = createSlice({
 export const {
   selectUserProfile,
   updateUserProfile,
-  removeUserProfilePicture,
   loadMoreUserProfiles,
   addNewUserProfile,
 } = userProfileSlice.actions;
