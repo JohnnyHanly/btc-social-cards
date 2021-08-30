@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-[Imgur](https://imgur.com/alJbLgh)
+[Click here to view a gif of a quick demo](https://imgur.com/alJbLgh)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
