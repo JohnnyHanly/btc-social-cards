@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Bigtincan Frontend Developer interview task
 
 [Click here to view a gif of a quick demo](https://imgur.com/alJbLgh)
 
