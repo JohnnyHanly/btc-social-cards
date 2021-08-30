@@ -1,7 +1,6 @@
 # Getting Started with Create React App
 
-![Alt Text](https://imgur.com/alJbLgh)
-
+[Imgur](https://imgur.com/alJbLgh)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
