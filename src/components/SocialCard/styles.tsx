@@ -28,5 +28,5 @@ export const AddSocialCardContainer = styled(SocialCardContainer)`
 `;
 
 export const PlusSign = styled.div`
-  font-size: 7em;SS
+  font-size: 7em;
 `;
